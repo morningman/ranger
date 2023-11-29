@@ -1,0 +1,387 @@
+{
+  "name": "doris",
+  "displayName": "Apache Doris",
+  "implClass": "org.apache.ranger.services.doris.RangerServiceDoris",
+  "label": "Doris",
+  "description": "Apache Doris",
+  "resources": [
+    {
+      "itemId": 1,
+      "name": "catalog",
+      "type": "string",
+      "level": 10,
+      "parent": "",
+      "mandatory": true,
+      "isValidLeaf": true,
+      "lookupSupported": true,
+      "recursiveSupported": false,
+      "excludesSupported": true,
+      "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+      "matcherOptions": {
+        "wildCard": true,
+        "ignoreCase": true
+      },
+      "validationRegEx": "",
+      "validationMessage": "",
+      "uiHint": "",
+      "accessTypeRestrictions": [
+        "CREATE",
+        "SHOW",
+        "ALTER",
+        "DROP"
+      ],
+      "label": "Doris Catalog",
+      "description": "Doris Catalog"
+    },
+    {
+      "itemId": 2,
+      "name": "database",
+      "type": "string",
+      "level": 20,
+      "parent": "catalog",
+      "mandatory": true,
+      "isValidLeaf": true,
+      "lookupSupported": true,
+      "recursiveSupported": false,
+      "excludesSupported": true,
+      "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+      "matcherOptions": {
+        "wildCard": true,
+        "ignoreCase": true
+      },
+      "validationRegEx": "",
+      "validationMessage": "",
+      "uiHint": "",
+      "accessTypeRestrictions": [
+        "CREATE",
+        "SHOW",
+        "ALTER",
+        "DROP",
+        "ALTER_CREATE",
+        "ALTER_CREATE_DROP"
+      ],
+      "label": "Doris Database",
+      "description": "Doris Database"
+    },
+    {
+      "itemId": 3,
+      "name": "table",
+      "type": "string",
+      "level": 30,
+      "parent": "database",
+      "mandatory": true,
+      "isValidLeaf": true,
+      "lookupSupported": true,
+      "recursiveSupported": false,
+      "excludesSupported": true,
+      "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+      "matcherOptions": {
+        "wildCard": true,
+        "ignoreCase": true
+      },
+      "validationRegEx": "",
+      "validationMessage": "",
+      "uiHint": "",
+      "accessTypeRestrictions": [
+        "CREATE",
+        "SHOW",
+        "ALTER",
+        "DROP",
+        "LOAD",
+        "SELECT",
+        "ALTER_CREATE",
+        "SHOW_VIEW"
+      ],
+      "label": "Doris Table",
+      "description": "Doris Table"
+    },
+    {
+      "itemId": 4,
+      "name": "column",
+      "type": "string",
+      "level": 40,
+      "parent": "table",
+      "mandatory": true,
+      "lookupSupported": true,
+      "recursiveSupported": false,
+      "excludesSupported": true,
+      "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+      "matcherOptions": {
+        "wildCard": true,
+        "ignoreCase": true
+      },
+      "validationRegEx": "",
+      "validationMessage": "",
+      "uiHint": "",
+      "accessTypeRestrictions": [
+        "SELECT"
+      ],
+      "label": "Doris Column",
+      "description": "Doris Column"
+    },
+    {
+      "itemId": 5,
+      "name": "resource",
+      "type": "string",
+      "level": 10,
+      "parent": "",
+      "mandatory": true,
+      "isValidLeaf": true,
+      "lookupSupported": true,
+      "recursiveSupported": false,
+      "excludesSupported": true,
+      "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+      "matcherOptions": {
+        "wildCard": true,
+        "ignoreCase": true
+      },
+      "validationRegEx": "",
+      "validationMessage": "",
+      "uiHint": "",
+      "accessTypeRestrictions": [
+        "SHOW_RESOURCES"
+      ],
+      "label": "Doris Resource",
+      "description": "Doris Resource"
+    },
+    {
+      "itemId": 6,
+      "name": "workload_group",
+      "type": "string",
+      "level": 10,
+      "parent": "",
+      "mandatory": true,
+      "isValidLeaf": true,
+      "lookupSupported": true,
+      "recursiveSupported": false,
+      "excludesSupported": true,
+      "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+      "matcherOptions": {
+        "wildCard": true,
+        "ignoreCase": true
+      },
+      "validationRegEx": "",
+      "validationMessage": "",
+      "uiHint": "",
+      "accessTypeRestrictions": [
+        "SHOW_WORKLOAD_GROUP"
+      ],
+      "label": "Doris Workload Group",
+      "description": "Doris Workload Group"
+    }
+  ],
+  "accessTypes": [
+    {
+      "itemId": 1,
+      "name": "SHOW",
+      "label": "SHOW"
+    },
+    {
+      "itemId": 2,
+      "name": "SHOW_VIEW",
+      "label": "SHOW_VIEW"
+    },
+    {
+      "itemId": 3,
+      "name": "SHOW_RESOURCES",
+      "label": "SHOW_RESOURCES"
+    },
+    {
+      "itemId": 4,
+      "name": "SHOW_WORKLOAD_GROUP",
+      "label": "SHOW_WORKLOAD_GROUP"
+    },
+    {
+      "itemId": 5,
+      "name": "GRANT",
+      "label": "GRANT"
+    },
+    {
+      "itemId": 6,
+      "name": "ADMIN",
+      "label": "ADMIN"
+    },
+    {
+      "itemId": 7,
+      "name": "LOAD",
+      "label": "LOAD"
+    },
+    {
+      "itemId": 8,
+      "name": "ALTER",
+      "label": "ALTER"
+    },
+    {
+      "itemId": 9,
+      "name": "CREATE",
+      "label": "CREATE"
+    },
+    {
+      "itemId": 10,
+      "name": "ALTER_CREATE",
+      "label": "ALTER_CREATE"
+    },
+    {
+      "itemId": 11,
+      "name": "ALTER_CREATE_DROP",
+      "label": "ALTER_CREATE_DROP"
+    },
+    {
+      "itemId": 12,
+      "name": "DROP",
+      "label": "DROP"
+    },
+    {
+      "itemId": 13,
+      "name": "SELECT",
+      "label": "SELECT"
+    },
+    {
+      "itemId": 14,
+      "name": "OPERATOR",
+      "label": "OPERATOR"
+    },
+    {
+      "itemId": 15,
+      "name": "USAGE",
+      "label": "USAGE"
+    }
+  ],
+  "configs": [
+    {
+      "itemId": 1,
+      "name": "username",
+      "type": "string",
+      "mandatory": true,
+      "validationRegEx": "",
+      "validationMessage": "",
+      "uiHint": "",
+      "label": "Username"
+    },
+    {
+      "itemId": 2,
+      "name": "password",
+      "type": "password",
+      "mandatory": false,
+      "validationRegEx": "",
+      "validationMessage": "",
+      "uiHint": "",
+      "label": "Password"
+    },
+    {
+      "itemId": 3,
+      "name": "jdbc.driver_class",
+      "type": "string",
+      "mandatory": true,
+      "validationRegEx": "",
+      "validationMessage": "",
+      "uiHint": "",
+      "defaultValue": "com.mysql.cj.jdbc.Driver"
+    },
+    {
+      "itemId": 4,
+      "name": "jdbc.url",
+      "type": "string",
+      "mandatory": true,
+      "defaultValue": "",
+      "validationRegEx": "",
+      "validationMessage": "",
+      "uiHint": ""
+    }
+  ],
+  "enums": [
+  ],
+  "contextEnrichers": [
+  ],
+  "policyConditions":
+  [
+  ],
+  "dataMaskDef": {
+    "accessTypes": [
+      {
+        "name": "SELECT"
+      }
+    ],
+    "resources": [
+      {
+        "name": "catalog",
+        "matcherOptions": {
+          "wildCard": "true"
+        },
+        "lookupSupported": true,
+        "uiHint":"{ \"singleValue\":true }"
+      },
+      {
+        "name": "database",
+        "matcherOptions": {
+          "wildCard": "true"
+        },
+        "lookupSupported": true,
+        "uiHint":"{ \"singleValue\":true }"
+      },
+      {
+        "name": "table",
+        "matcherOptions": {
+          "wildCard": "true"
+        },
+        "lookupSupported": true,
+        "uiHint":"{ \"singleValue\":true }"
+      },
+      {
+        "name": "column",
+        "matcherOptions": {
+          "wildCard": "true"
+        },
+        "lookupSupported": true,
+        "uiHint":"{ \"singleValue\":true }"
+      }
+    ],
+    "maskTypes": [
+      {
+        "itemId": 1,
+        "name": "MASK",
+        "label": "Redact",
+        "description": "Replace lowercase with 'x', uppercase with 'X', digits with '0'",
+        "transformer": "cast(regexp_replace(regexp_replace(regexp_replace({col},'([A-Z])', 'X'),'([a-z])','x'),'([0-9])','0') as {type})",
+        "dataMaskOptions": {
+        }
+      }
+    ]
+  },
+  "rowFilterDef": {
+    "accessTypes": [
+      {
+        "name": "SELECT"
+      }
+    ],
+    "resources": [
+      {
+        "name": "catalog",
+        "matcherOptions": {
+          "wildCard": "true"
+        },
+        "lookupSupported": true,
+        "mandatory": true,
+        "uiHint": "{ \"singleValue\":true }"
+      },
+      {
+        "name": "database",
+        "matcherOptions": {
+          "wildCard": "true"
+        },
+        "lookupSupported": true,
+        "mandatory": true,
+        "uiHint": "{ \"singleValue\":true }"
+      },
+      {
+        "name": "table",
+        "matcherOptions": {
+          "wildCard": "true"
+        },
+        "lookupSupported": true,
+        "mandatory": true,
+        "uiHint": "{ \"singleValue\":true }"
+      }
+    ]
+  }
+}

@@ -277,7 +277,7 @@
                 <module>agents-installer</module>
                 <module>credentialbuilder</module>
                 <module>embeddedwebserver</module>
-		<module>ranger-common-ha</module>
+		        <module>ranger-common-ha</module>
                 <module>kms</module>
                 <module>hbase-agent</module>
                 <module>hdfs-agent</module>
@@ -287,6 +287,7 @@
                 <module>plugin-yarn</module>
                 <module>plugin-ozone</module>
                 <module>security-admin</module>
+                <module>plugin-doris</module>
                 <module>plugin-kafka</module>
                 <module>plugin-solr</module>
                 <module>plugin-nestedstructure</module>
