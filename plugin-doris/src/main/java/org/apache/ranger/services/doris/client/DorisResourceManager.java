@@ -120,7 +120,7 @@ public class DorisResourceManager {
       try {
 
         if (LOG.isDebugEnabled()) {
-          LOG.debug("==> DorisResourceManager.getPrestoResources() UserInput: \"" + userInput + "\" configs: " + configs + " catalogList: " + catalogList + " tableList: "
+          LOG.debug("==> DorisResourceManager.getDorisResources() UserInput: \"" + userInput + "\" configs: " + configs + " catalogList: " + catalogList + " tableList: "
             + tableList + " columnList: " + columnList);
         }
 

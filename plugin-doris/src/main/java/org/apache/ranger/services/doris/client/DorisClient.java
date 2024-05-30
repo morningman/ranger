@@ -92,7 +92,7 @@ public class DorisClient extends BaseClient implements Closeable {
         DriverManager.registerDriver(driver);
       } catch (SQLException e) {
         String msgDesc = "initConnection: Caught SQLException while registering"
-          + " the Presto driver.";
+          + " the Doris driver.";
         HadoopException hdpException = new HadoopException(msgDesc, e);
         hdpException.generateResponseDataMap(false, getMessage(e),
           msgDesc + ERR_MSG, null, null);
@@ -119,7 +119,7 @@ public class DorisClient extends BaseClient implements Closeable {
           msgDesc + ERR_MSG, null, null);
         throw hdpException;
       } catch (SecurityException se) {
-        String msgDesc = "initConnection: unable to initiate connection to Presto instance,"
+        String msgDesc = "initConnection: unable to initiate connection to Doris instance,"
           + " The caller's class loader is not the same as or an ancestor "
           + "of the class loader for the current class and invocation of "
           + "s.checkPackageAccess() denies access to the package of this class.";
@@ -128,7 +128,7 @@ public class DorisClient extends BaseClient implements Closeable {
           msgDesc + ERR_MSG, null, null);
         throw hdpException;
       } catch (Throwable t) {
-        String msgDesc = "initConnection: Unable to connect to Presto instance, "
+        String msgDesc = "initConnection: Unable to connect to Doris instance, "
           + "please provide valid value of field : {jdbc.driverClassName}.";
         HadoopException hdpException = new HadoopException(msgDesc, t);
         hdpException.generateResponseDataMap(false, getMessage(t),
@@ -140,19 +140,19 @@ public class DorisClient extends BaseClient implements Closeable {
     try {
       con = DriverManager.getConnection(url, properties);
     } catch (SQLException e) {
-      String msgDesc = "Unable to connect to Presto instance.";
+      String msgDesc = "Unable to connect to Doris instance.";
       HadoopException hdpException = new HadoopException(msgDesc, e);
       hdpException.generateResponseDataMap(false, getMessage(e),
         msgDesc + ERR_MSG, null, null);
       throw hdpException;
     } catch (SecurityException se) {
-      String msgDesc = "Unable to connect to Presto instance.";
+      String msgDesc = "Unable to connect to Doris instance.";
       HadoopException hdpException = new HadoopException(msgDesc, se);
       hdpException.generateResponseDataMap(false, getMessage(se),
         msgDesc + ERR_MSG, null, null);
       throw hdpException;
     } catch (Throwable t) {
-      String msgDesc = "initConnection: Unable to connect to Presto instance, ";
+      String msgDesc = "initConnection: Unable to connect to Doris instance, ";
       HadoopException hdpException = new HadoopException(msgDesc, t);
       hdpException.generateResponseDataMap(false, getMessage(t),
         msgDesc + ERR_MSG, null, null);
@@ -657,7 +657,7 @@ public class DorisClient extends BaseClient implements Closeable {
         con.close();
       }
     } catch (SQLException e) {
-      LOG.error("Unable to close Presto SQL connection", e);
+      LOG.error("Unable to close Doris SQL connection", e);
     }
   }
 
