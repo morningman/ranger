@@ -25,10 +25,13 @@
       "validationMessage": "",
       "uiHint": "",
       "accessTypeRestrictions": [
-        "CREATE",
-        "SHOW",
+        "GRANT",
+        "SELECT",
+        "LOAD",
         "ALTER",
-        "DROP"
+        "CREATE",
+        "DROP",
+        "SHOW_VIEW"
       ],
       "label": "Doris Catalog",
       "description": "Doris Catalog"
@@ -53,12 +56,13 @@
       "validationMessage": "",
       "uiHint": "",
       "accessTypeRestrictions": [
-        "CREATE",
-        "SHOW",
+        "GRANT",
+        "SELECT",
+        "LOAD",
         "ALTER",
+        "CREATE",
         "DROP",
-        "ALTER_CREATE",
-        "ALTER_CREATE_DROP"
+        "SHOW_VIEW"
       ],
       "label": "Doris Database",
       "description": "Doris Database"
@@ -83,13 +87,12 @@
       "validationMessage": "",
       "uiHint": "",
       "accessTypeRestrictions": [
-        "CREATE",
-        "SHOW",
-        "ALTER",
-        "DROP",
-        "LOAD",
+        "GRANT",
         "SELECT",
-        "ALTER_CREATE",
+        "LOAD",
+        "ALTER",
+        "CREATE",
+        "DROP",
         "SHOW_VIEW"
       ],
       "label": "Doris Table",
@@ -168,81 +171,89 @@
       ],
       "label": "Doris Workload Group",
       "description": "Doris Workload Group"
+    },
+    {
+      "itemId": 7,
+      "name": "global",
+      "type": "string",
+      "level": 10,
+      "parent": "",
+      "mandatory": true,
+      "isValidLeaf": true,
+      "lookupSupported": false,
+      "recursiveSupported": false,
+      "excludesSupported": false,
+      "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+      "matcherOptions": {
+        "wildCard": true,
+        "ignoreCase": true
+      },
+      "validationRegEx": "",
+      "validationMessage": "",
+      "uiHint": "",
+      "accessTypeRestrictions": [
+        "ADMIN",
+        "NODE",
+        "GRANT",
+        "SELECT",
+        "LOAD",
+        "ALTER",
+        "CREATE",
+        "DROP",
+        "SHOW_VIEW"
+      ],
+      "label": "Doris Global",
+      "description": "Doris Global"
     }
   ],
   "accessTypes": [
     {
       "itemId": 1,
-      "name": "SHOW",
-      "label": "SHOW"
-    },
-    {
-      "itemId": 2,
-      "name": "SHOW_VIEW",
-      "label": "SHOW_VIEW"
-    },
-    {
-      "itemId": 3,
-      "name": "SHOW_RESOURCES",
-      "label": "SHOW_RESOURCES"
-    },
-    {
-      "itemId": 4,
-      "name": "SHOW_WORKLOAD_GROUP",
-      "label": "SHOW_WORKLOAD_GROUP"
-    },
-    {
-      "itemId": 5,
-      "name": "GRANT",
-      "label": "GRANT"
-    },
-    {
-      "itemId": 6,
       "name": "ADMIN",
       "label": "ADMIN"
     },
     {
-      "itemId": 7,
-      "name": "LOAD",
-      "label": "LOAD"
+      "itemId": 2,
+      "name": "NODE",
+      "label": "NODE"
     },
     {
-      "itemId": 8,
-      "name": "ALTER",
-      "label": "ALTER"
+      "itemId": 3,
+      "name": "GRANT",
+      "label": "GRANT"
     },
     {
-      "itemId": 9,
-      "name": "CREATE",
-      "label": "CREATE"
-    },
-    {
-      "itemId": 10,
-      "name": "ALTER_CREATE",
-      "label": "ALTER_CREATE"
-    },
-    {
-      "itemId": 11,
-      "name": "ALTER_CREATE_DROP",
-      "label": "ALTER_CREATE_DROP"
-    },
-    {
-      "itemId": 12,
-      "name": "DROP",
-      "label": "DROP"
-    },
-    {
-      "itemId": 13,
+      "itemId": 4,
       "name": "SELECT",
       "label": "SELECT"
     },
     {
-      "itemId": 14,
-      "name": "OPERATOR",
-      "label": "OPERATOR"
+      "itemId": 5,
+      "name": "LOAD",
+      "label": "LOAD"
     },
     {
-      "itemId": 15,
+      "itemId": 6,
+      "name": "ALTER",
+      "label": "ALTER"
+    },
+    {
+      "itemId": 7,
+      "name": "CREATE",
+      "label": "CREATE"
+    },
+    {
+      "itemId": 8,
+      "name": "DROP",
+      "label": "DROP"
+    },
+    {
+      "itemId": 9,
+      "name": "SHOW_VIEW",
+      "label": "SHOW_VIEW"
+    },
+    {
+      "itemId": 10,
       "name": "USAGE",
       "label": "USAGE"
     }
