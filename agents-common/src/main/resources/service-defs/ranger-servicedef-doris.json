@@ -204,6 +204,56 @@
       ],
       "label": "Doris Global",
       "description": "Doris Global"
+    },
+    {
+      "itemId": 8,
+      "name": "compute_group",
+      "type": "string",
+      "level": 10,
+      "parent": "",
+      "mandatory": true,
+      "isValidLeaf": true,
+      "lookupSupported": true,
+      "recursiveSupported": false,
+      "excludesSupported": true,
+      "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+      "matcherOptions": {
+        "wildCard": true,
+        "ignoreCase": true
+      },
+      "validationRegEx": "",
+      "validationMessage": "",
+      "uiHint": "",
+      "accessTypeRestrictions": [
+        "USAGE"
+      ],
+      "label": "Doris Compute Group",
+      "description": "Doris Compute Group"
+    },
+    {
+      "itemId": 9,
+      "name": "storage_vault",
+      "type": "string",
+      "level": 10,
+      "parent": "",
+      "mandatory": true,
+      "isValidLeaf": true,
+      "lookupSupported": true,
+      "recursiveSupported": false,
+      "excludesSupported": true,
+      "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+      "matcherOptions": {
+        "wildCard": true,
+        "ignoreCase": true
+      },
+      "validationRegEx": "",
+      "validationMessage": "",
+      "uiHint": "",
+      "accessTypeRestrictions": [
+        "USAGE"
+      ],
+      "label": "Doris Storage Vault",
+      "description": "Doris Storage Vault"
     }
   ],
   "accessTypes": [
