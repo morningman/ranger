@@ -403,7 +403,7 @@
         "name": "MASK",
         "label": "Redact",
         "description": "Replace lowercase with 'x', uppercase with 'X', digits with '0'",
-        "transformer": "regexp_replace(regexp_replace(regexp_replace({col},'([A-Z])', 'X'),'([a-z])','x'),'([0-9])','0')",
+        "transformer": "regexp_replace(regexp_replace(regexp_replace({col},'([A-Z])', 'x'),'([a-z])','x'),'([0-9])','n')",
         "dataMaskOptions": {
         }
       },
