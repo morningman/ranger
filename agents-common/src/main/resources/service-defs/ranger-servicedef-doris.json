@@ -63,6 +63,7 @@
         "ALTER",
         "CREATE",
         "DROP",
+        "SHOW",
         "SHOW_VIEW"
       ],
       "label": "Doris Database",
@@ -94,6 +95,7 @@
         "ALTER",
         "CREATE",
         "DROP",
+        "SHOW",
         "SHOW_VIEW"
       ],
       "label": "Doris Table",
@@ -201,6 +203,7 @@
         "ALTER",
         "CREATE",
         "DROP",
+        "SHOW",
         "SHOW_VIEW"
       ],
       "label": "Doris Global",
