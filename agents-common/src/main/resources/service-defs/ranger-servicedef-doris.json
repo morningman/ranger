@@ -31,6 +31,7 @@
         "ALTER",
         "CREATE",
         "DROP",
+        "SHOW",
         "SHOW_VIEW"
       ],
       "label": "Doris Catalog",
