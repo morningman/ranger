@@ -310,6 +310,11 @@
       "itemId": 10,
       "name": "USAGE",
       "label": "USAGE"
+    },
+    {
+      "itemId": 11,
+      "name": "SHOW",
+      "label": "SHOW"
     }
   ],
   "configs": [
